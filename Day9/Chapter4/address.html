@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en us">
+    <head>
+        <meta charset ="utf-8"/>
+        <title>Address</title>
+        <script>
+            function CreateAddress(){
+                let street_address = document.getElementById('Street_address').value;
+                let city = document.getElementById('City').value;
+                let state = document.getElementById('State').value;
+                let zip_code = document.getElementById('zip_code').value;
+                let fullAddress = street_address + " " + city + " " + state + " " + zip_code;
+                document.getElementById('full_address').innerHTML = fullAddress;
+            }
+        </script>
+    </head>
+
+    <body>
+       Street Address: <input id = "Street_address" type = "text"><br>
+       City: <input id = "City" type = "text"><br>
+        State: <input id = "State" type = "text"><br>
+        Zip Code: <input id = "zip_code" type = "text"><br>
+        <button onclick = "CreateAddress()">Create Address</button>
+        <div id = "full_address">Address Here</div>
+    </body>
+</html>
