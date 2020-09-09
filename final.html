@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "us en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Get Your Age</title>
+        <script>
+            function age(){
+                let now = new Date();
+                let current_year = now.getFullYear();
+
+                let birthyear = parseInt(document.getElementById("birthyear").value);
+                let age = current_year - birthyear;
+                document.getElementById("age").innerHTML = age;
+            }
+        </script>
+
+    </head>
+    <body>
+        Birthyear: <input id = "birthyear" type = "text"/>
+        <button onclick = "age()">Calculate Age</button>
+        <span id = "age">Your age</span>
+
+    </body>
+</html>
